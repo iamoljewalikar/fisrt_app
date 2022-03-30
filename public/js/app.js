@@ -6,7 +6,9 @@ const search = document.querySelector('input')
 const cityname = document.querySelector('#cityname')
 const country = document.querySelector('#country')
 const temp = document.querySelector('#temp')
-
+const my_img = document.querySelector('#my_img')
+const status_img = document.querySelector('#status')
+let path
 
 weatherForm.addEventListener('submit',(e) =>{
     e.preventDefault()
@@ -25,6 +27,12 @@ weatherForm.addEventListener('submit',(e) =>{
                 cityname.textContent = data.location.name
                 country.textContent = data.location.country
                 temp.textContent = data.current.temperature + "°F"
+                path = data.current.weather_icons[0]
+                console.log("Message",path)
+                my_img.setAttribute('src',path)
+                status_img.innerHTML = data.current.weather_descriptions[0]
+
+
             }
         })
     })

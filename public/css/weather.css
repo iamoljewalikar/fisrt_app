@@ -21,7 +21,7 @@ input{
   background-color: #fff;  
   font-family: inherit;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
-  min-width: 500px;  
+  min-width: 50%;  
   font-size: 1rem;  
 }  
 footer {
@@ -52,4 +52,11 @@ input:focus{
 }
 #country {
   font-size: 30px;
+}
+ #status {
+  height: 20px;
+  width: 40px;
+}
+#my_img{
+  float: left;
 }
