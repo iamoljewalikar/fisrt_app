@@ -5,6 +5,7 @@ const express = require('express')
 const api = require('./utility/api_weather.js')
 
 const app = express()
+const port = process.env.PORT || 8001
 
 // Define paths for Express config
 const public_dir_path = path.join(__dirname,'../public')
@@ -45,6 +46,6 @@ app.get('/weather',(req,res) => {
     })
 })
 
-app.listen(8001, () => {
-    console.log('Server is up on port 8001.')
+app.listen(port, () => {
+    console.log('Server is up on port ',port)
 })
