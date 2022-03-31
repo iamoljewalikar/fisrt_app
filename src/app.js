@@ -22,7 +22,7 @@ app.use(express.static(public_dir_path))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Welcome to My Weather Application',
+        title: 'Weather Application',
         name: 'Created by © AMOL J'
     })
 })

@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit',(e) =>{
                 country.textContent = data.location.country
                 temp.textContent = data.current.temperature + " °C"
                 path = data.current.weather_icons[0]
-                console.log("Message",path)
+                // console.log("Message",path)
                 my_img.setAttribute('src',path)
                 status_img.innerHTML = data.current.weather_descriptions[0]
 
